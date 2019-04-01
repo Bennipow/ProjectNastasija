@@ -12,4 +12,19 @@ public class SpellObject : MonoBehaviour
     Sprite m_ParticleSprite;
     // Spell with stats
     Spell m_MySpell;
+
+    private void Update()
+    {
+        m_MySpell.m_CastType.UpdateAfterCasting();
+    }
+
+    private void FixedUpdate()
+    {
+        m_MySpell.m_CastType.FixedUpdateAfterCasting();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        m_MySpell.m_CastType.CollisionWithSomething();
+    }
 }

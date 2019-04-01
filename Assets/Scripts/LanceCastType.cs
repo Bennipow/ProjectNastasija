@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LanceCastType : CastType
 {
-    public override void UpdateWhileCasting()
+    public override void FixedUpdateWhileCasting()
     {
         //Check for input
         // when the player used the input to throw the lance
@@ -14,5 +14,25 @@ public class LanceCastType : CastType
     public override void StartWhenStartedCasting()
     {
         //Instantiate the lance in the Playerhand
+    }
+
+    public override void CollisionWithSomething()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void FixedUpdateAfterCasting()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void UpdateWhileCasting()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void UpdateAfterCasting()
+    {
+        throw new System.NotImplementedException();
     }
 }
